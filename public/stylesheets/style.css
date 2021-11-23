@@ -1035,7 +1035,7 @@ section {
 # Team
 --------------------------------------------------------------*/
 
-/*.teamcsi{
+.teamcsi{
   height: auto; 
   width: 40%;
 }
@@ -1044,7 +1044,7 @@ section {
   .teamcsi{
     width: 100%;
   }
-}*/
+}
 
 .team {
   background: #fff;
@@ -1132,10 +1132,9 @@ section {
 @media (max-width: 600px) {
   .team .member {
     text-align: center;
-    height: 75%;
-    width: 75%;
+    height: auto;
+    width: 100%;
     position: relative;
-    margin-left: 14%;
   }
 }
 
