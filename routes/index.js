@@ -77,6 +77,7 @@ router.get('/csigecbh',verifyLogin, function(req, res) {
     var link = '/add-csigecbh-pdf'
     var logout1 = true;
     var editable = true;
+    req.session.admin= "csigecbh";
     var i = 1
     data.forEach(element => {
       element.index=i
@@ -145,6 +146,7 @@ router.get('/csitkm',verifyLogin, function(req, res) {
     var link = '/add-csitkm-pdf'
     var editable = true;
     var logout1 = true;
+    req.session.admin= "csitkm";
     var i = 1
     data.forEach(element => {
       element.index=i
@@ -225,6 +227,19 @@ router.get('/delete-report-tkm/:id',(req,res)=>{
     res.redirect('/csitkm');
   })
 });
+
+router.get('/card-upload', function(req, res, next) {
+  if (req.session.admin=="csigecbh") {
+    var link = "/add-csigecbh-pdf"
+    var page="/csigecbh"
+
+  } else if((req.session.admin=="csitkm")) {
+    var link = "/add-csitkm-pdf"
+    var page="/csitkm" 
+  }
+  res.render('card', {link,page});
+});
+
 
 
 
