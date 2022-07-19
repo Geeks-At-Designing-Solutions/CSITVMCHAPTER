@@ -20,7 +20,7 @@
     "mongodb": "^4.2.0",
     "morgan": "~1.9.1",
     "mv": "^2.1.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.19"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0"

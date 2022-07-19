@@ -39,7 +39,7 @@ app.use('/users', usersRouter);
 
 db.connect((err)=>{
   if(err){
-    res.render('login', {loginErr:'db error'});
+    // res.render('login', {loginErr:'db error'});
     console.log("Connection error"+err)
   } 
   else {
