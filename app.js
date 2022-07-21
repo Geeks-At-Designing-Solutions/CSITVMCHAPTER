@@ -37,15 +37,15 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-db.connect((err)=>{
-  if(err){
-    // res.render('login', {loginErr:'db error'});
-    console.log("Connection error"+err)
-  } 
-  else {
-    console.log("data base connected successfully");
-  }
-})
+// db.connect((err)=>{
+//   if(err){
+//     // res.render('login', {loginErr:'db error'});
+//     console.log("Connection error"+err)
+//   } 
+//   else {
+//     console.log("data base connected successfully");
+//   }
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
